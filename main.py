@@ -5,6 +5,7 @@ import tkinter as tk
 
 from src.ui.themes.theme import COLORS, FONTS, SPACING, WINDOW
 from src.ui.pages.home_page import HomePage
+from src.ui.pages.merge_page import MergePage
 from src.ui.components.contact_dialog import ContactDialog
 
 
@@ -27,6 +28,8 @@ class PDFProApp(ctk.CTk):
         # Layout chính
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(1, weight=1)  # Content area mở rộng
+
+        self._current_feature_frame = None
 
         self._build_header()
         self._build_content()
@@ -95,7 +98,7 @@ class PDFProApp(ctk.CTk):
         nav_frame = ctk.CTkFrame(header, fg_color="transparent")
         nav_frame.grid(row=0, column=1, pady=12)
 
-        all_tools_btn = ctk.CTkButton(
+        self._all_tools_btn = ctk.CTkButton(
             nav_frame,
             text="Tất Cả Công Cụ",
             font=("Segoe UI", 14, "bold"),
@@ -105,8 +108,9 @@ class PDFProApp(ctk.CTk):
             width=100,
             height=36,
             corner_radius=8,
+            command=self._show_home,
         )
-        all_tools_btn.pack()
+        self._all_tools_btn.pack()
 
     def _build_content(self):
         """Xây dựng vùng nội dung chính."""
@@ -195,8 +199,25 @@ class PDFProApp(ctk.CTk):
         )
 
     def _on_feature_selected(self, feature_name):
-        """Xử lý khi chọn một tính năng - placeholder cho các trang con."""
-        print(f"[PDF PRO] Da chon tinh nang: {feature_name}")
+        """Xử lý khi chọn một tính năng - chuyển đến trang tính năng."""
+        if feature_name == "Ghép File PDF":
+            self._open_feature_page(MergePage)
+
+    def _open_feature_page(self, page_class):
+        """Mở một trang tính năng mới."""
+        if self._current_feature_frame:
+            self._current_feature_frame.destroy()
+            self._current_feature_frame = None
+        self._home_page.grid_forget()
+        self._current_feature_frame = page_class(self, on_back=self._show_home)
+        self._current_feature_frame.grid(row=1, column=0, sticky="nsew")
+
+    def _show_home(self):
+        """Quay về trang chủ."""
+        if self._current_feature_frame:
+            self._current_feature_frame.destroy()
+            self._current_feature_frame = None
+        self._home_page.grid(row=1, column=0, sticky="nsew")
 
     def _on_footer_link_click(self, link_text):
         """Xử lý khi nhấn vào link ở footer."""
