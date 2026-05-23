@@ -18,50 +18,50 @@ from src.ui.components.icon_renderer import (
 # Cấu hình 8 tính năng
 FEATURES = [
     {
-        "title": "Ghep File PDF",
-        "description": "Ket hop nhieu tep PDF lai voi nhau theo thu tu mong muon mot cach de dang.",
+        "title": "Ghép File PDF",
+        "description": "Kết hợp nhiều tệp PDF lại với nhau theo thứ tự mong muốn một cách dễ dàng.",
         "color": COLORS["accent_purple"],
         "icon_func": draw_merge_icon,
     },
     {
-        "title": "Sap Xep Trang",
-        "description": "Xem truoc trang, keo tha sap xep lai, xoay goc hoac xoa cac trang khong mong muon.",
+        "title": "Sắp Xếp Trang",
+        "description": "Xem trước trang, kéo thả sắp xếp lại, xoay góc hoặc xóa các trang không mong muốn.",
         "color": COLORS["accent_blue"],
         "icon_func": draw_sort_icon,
     },
     {
-        "title": "Chinh Sua & Ky Ten",
-        "description": "Ve tu do, chen chu, dong dau va ky ten truc tiep len tai lieu PDF cua ban.",
+        "title": "Chỉnh Sửa & Ký Tên",
+        "description": "Vẽ tự do, chèn chữ, đóng dấu và ký tên trực tiếp lên tài liệu PDF của bạn.",
         "color": COLORS["accent_green"],
         "icon_func": draw_edit_icon,
     },
     {
-        "title": "Tach Trang PDF",
-        "description": "Trich xuat cac trang cu the hoac chia nho tai lieu thanh nhieu tep moi.",
+        "title": "Tách Trang PDF",
+        "description": "Trích xuất các trang cụ thể hoặc chia nhỏ tài liệu thành nhiều tệp mới.",
         "color": COLORS["accent_teal"],
         "icon_func": draw_split_icon,
     },
     {
-        "title": "Trich Xuat Van Ban",
-        "description": "Chuyen doi PDF sang van ban co the chinh sua voi cong nghe OCR.",
+        "title": "Trích Xuất Văn Bản",
+        "description": "Chuyển đổi PDF sang văn bản có thể chỉnh sửa với công nghệ OCR.",
         "color": COLORS["accent_orange"],
         "icon_func": draw_extract_text_icon,
     },
     {
-        "title": "Xuat Anh Tu PDF",
-        "description": "Chuyen doi moi trang PDF thanh mot tep hinh anh chat luong cao.",
+        "title": "Xuất Ảnh Từ PDF",
+        "description": "Chuyển đổi mỗi trang PDF thành một tệp hình ảnh chất lượng cao.",
         "color": COLORS["accent_pink"],
         "icon_func": draw_extract_image_icon,
     },
     {
-        "title": "Xuat PDF Sang Excel",
-        "description": "Tu dong trich xuat bang bieu tu PDF sang bang tinh Excel.",
+        "title": "Xuất PDF Sang Excel",
+        "description": "Tự động trích xuất bảng biểu từ PDF sang bảng tính Excel.",
         "color": COLORS["accent_emerald"],
         "icon_func": draw_to_excel_icon,
     },
     {
-        "title": "Nen File PDF",
-        "description": "Giam dung luong tep PDF ma van giu nguyen chat luong hien thi.",
+        "title": "Nén File PDF",
+        "description": "Giảm dung lượng tệp PDF mà vẫn giữ nguyên chất lượng hiển thị.",
         "color": COLORS["accent_cyan"],
         "icon_func": draw_compress_icon,
     },
@@ -101,7 +101,7 @@ class HomePage(ctk.CTkFrame):
         # Tiêu đề chính với gradient text (dùng 2 label mô phỏng)
         title_line1 = ctk.CTkLabel(
             hero_frame,
-            text="Xu Ly PDF",
+            text="Xử Lý PDF",
             font=("Segoe UI", 36, "bold"),
             text_color=COLORS["gradient_start"],
         )
@@ -109,7 +109,7 @@ class HomePage(ctk.CTkFrame):
 
         title_line2 = ctk.CTkLabel(
             hero_frame,
-            text="Nhanh Chong & Bao Mat",
+            text="Nhanh Chóng & Bảo Mật",
             font=("Segoe UI", 36, "bold"),
             text_color=COLORS["gradient_end"],
         )
@@ -118,8 +118,8 @@ class HomePage(ctk.CTkFrame):
         # Mô tả phụ
         subtitle = ctk.CTkLabel(
             hero_frame,
-            text="Moi thao tac thuc hien truc tiep tren may tinh cua ban.\n"
-                 "Tep tin khong bao gio duoc gui len bat ky may chu nao.",
+            text="Mọi thao tác thực hiện trực tiếp trên máy tính của bạn.\n"
+                 "Tệp tin không bao giờ được gửi lên bất kỳ máy chủ nào.",
             font=FONTS["body"],
             text_color=COLORS["text_secondary"],
             justify="center",

@@ -5,6 +5,7 @@ import tkinter as tk
 
 from src.ui.themes.theme import COLORS, FONTS, SPACING, WINDOW
 from src.ui.pages.home_page import HomePage
+from src.ui.components.contact_dialog import ContactDialog
 
 
 class PDFProApp(ctk.CTk):
@@ -14,7 +15,7 @@ class PDFProApp(ctk.CTk):
         super().__init__()
 
         # Cấu hình cửa sổ
-        self.title("PDF PRO - Bo Cong Cu Chinh Sua PDF Chuyen Nghiep")
+        self.title("PDF PRO - Bộ Công Cụ Chỉnh Sửa PDF Chuyên Nghiệp")
         self.geometry(f"{WINDOW['width']}x{WINDOW['height']}")
         self.minsize(WINDOW["min_width"], WINDOW["min_height"])
 
@@ -84,7 +85,7 @@ class PDFProApp(ctk.CTk):
 
         app_desc = ctk.CTkLabel(
             logo_text_frame,
-            text="BO CONG CU CHINH SUA FILE PDF CHUYEN NGHIEP",
+            text="BỘ CÔNG CỤ CHỈNH SỬA FILE PDF CHUYÊN NGHIỆP",
             font=("Segoe UI", 8),
             text_color=COLORS["text_muted"],
         )
@@ -96,7 +97,7 @@ class PDFProApp(ctk.CTk):
 
         all_tools_btn = ctk.CTkButton(
             nav_frame,
-            text="All Tools",
+            text="Tất Cả Công Cụ",
             font=("Segoe UI", 14, "bold"),
             text_color=COLORS["text_primary"],
             fg_color="transparent",
@@ -152,7 +153,7 @@ class PDFProApp(ctk.CTk):
         right_frame = ctk.CTkFrame(footer, fg_color="transparent")
         right_frame.grid(row=0, column=1, padx=24, pady=10, sticky="e")
 
-        links = ["Chinh sach bao mat", "Dieu khoan dich vu", "Lien he"]
+        links = ["Chính sách bảo mật", "Điều khoản dịch vụ", "Liên hệ"]
         for link_text in links:
             link = ctk.CTkLabel(
                 right_frame,
@@ -164,6 +165,7 @@ class PDFProApp(ctk.CTk):
             link.pack(side="left", padx=(16, 0))
             link.bind("<Enter>", lambda e, l=link: l.configure(text_color=COLORS["text_secondary"]))
             link.bind("<Leave>", lambda e, l=link: l.configure(text_color=COLORS["text_muted"]))
+            link.bind("<Button-1>", lambda e, t=link_text: self._on_footer_link_click(t))
 
     def _draw_logo(self, canvas):
         """Vẽ logo PDF PRO trên canvas."""
@@ -195,6 +197,11 @@ class PDFProApp(ctk.CTk):
     def _on_feature_selected(self, feature_name):
         """Xử lý khi chọn một tính năng - placeholder cho các trang con."""
         print(f"[PDF PRO] Da chon tinh nang: {feature_name}")
+
+    def _on_footer_link_click(self, link_text):
+        """Xử lý khi nhấn vào link ở footer."""
+        if link_text == "Liên hệ":
+            ContactDialog(self)
 
 
 def main():
