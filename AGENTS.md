@@ -21,7 +21,7 @@ No tests, linters, or typecheckers configured. Edit `requirements.txt` when addi
 
 - **Dual icon system:** SVG constants in `src/assets/icons/icons.py` are **unused**. Active icons are Canvas-drawn functions in `src/ui/components/icon_renderer.py`.
 - **No `pyproject.toml`**, no `.gitignore` — only `requirements.txt` governs deps.
-- **Git remote:** `origin` points to `https://github.com/HoaThang34/PRD-PRO.git` (PRD, not PDF — likely a typo)
+- **Git remote:** `origin` points to `https://github.com/HoaThang34/PDF_PRO.git`
 - **Color alpha blend:** `_hex_to_rgba()` in `feature_card.py` hardcodes `bg_rgb = (26, 27, 46)` as a tkinter Canvas workaround
 - **CTkScrollableFrame:** `grid_propagate(False)` not supported (takes no args). Use `grid_propagate()` read-only.
 - **CTkLabel images:** Must use `CTkImage`, not `ImageTk.PhotoImage`, to avoid UserWarning.
