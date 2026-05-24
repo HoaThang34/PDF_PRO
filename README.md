@@ -49,7 +49,7 @@
 
 ## Landing Page
 
-Truy cập landing page trực tuyến tại: [pdf-pro.vercel.app](https://pdf-pro.vercel.app) (nếu đã deploy)
+Truy cập landing page trực tuyến tại: [Đây](https://pdfpro-httools.vercel.app/)
 
 Landing page được xây dựng với **Vite + React 18**, thiết kế dark theme chuyên nghiệp, đầy đủ thông tin sản phẩm và liên hệ tác giả.
 
