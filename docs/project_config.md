@@ -33,7 +33,7 @@ PDF-PRO/
 | 2   | Sắp Xếp Trang     | Đã phát triển |
 | 3   | Chỉnh Sửa & Ký Tên | Đã phát triển |
 | 4   | Tách Trang PDF     | Đã phát triển |
-| 5   | Trích Xuất Văn Bản | Chưa phát triển |
+| 5   | Trích Xuất Văn Bản | Đã phát triển |
 | 6   | Xuất Ảnh Từ PDF    | Chưa phát triển |
 | 7   | Xuất PDF Sang Excel | Chưa phát triển |
 | 8   | Nén File PDF       | Chưa phát triển |

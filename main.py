@@ -9,6 +9,7 @@ from src.ui.pages.merge_page import MergePage
 from src.ui.pages.sort_page import SortPage
 from src.ui.pages.edit_page import EditPage
 from src.ui.pages.split_page import SplitPage
+from src.ui.pages.extract_text_page import ExtractTextPage
 from src.ui.components.contact_dialog import ContactDialog
 
 
@@ -211,6 +212,8 @@ class PDFProApp(ctk.CTk):
             self._open_feature_page(EditPage)
         elif feature_name == "Tách Trang PDF":
             self._open_feature_page(SplitPage)
+        elif feature_name == "Trích Xuất Văn Bản":
+            self._open_feature_page(ExtractTextPage)
 
     def _open_feature_page(self, page_class):
         """Mở một trang tính năng mới."""
