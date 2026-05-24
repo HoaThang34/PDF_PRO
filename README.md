@@ -35,7 +35,7 @@
 
 <div align="center">
   <img src="image/tinhnang.png" alt="Tính năng chỉnh sửa PDF" width="80%" style="border-radius: 12px; border: 1px solid #333;">
-  <p><em>Tính năng chỉnh sửa & ký tên trực tiếp trên PDF</em></p>
+  <p><em>Tính năng ghép file PDF</em></p>
 </div>
 
 <br>
