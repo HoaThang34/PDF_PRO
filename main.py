@@ -5,6 +5,14 @@ import tkinter as tk
 from PIL import Image
 
 from src.ui.themes.theme import COLORS, FONTS, SPACING, WINDOW
+
+
+def _resource_path(relative_path):
+    try:
+        base = sys._MEIPASS
+    except Exception:
+        base = os.path.dirname(__file__)
+    return os.path.join(base, relative_path)
 from src.ui.pages.home_page import HomePage
 from src.ui.pages.merge_page import MergePage
 from src.ui.pages.sort_page import SortPage
@@ -75,7 +83,7 @@ class PDFProApp(ctk.CTk):
         logo_frame.grid(row=0, column=0, padx=24, pady=12, sticky="w")
 
         # Logo image
-        logo_path = os.path.join(os.path.dirname(__file__), "logo.png")
+        logo_path = _resource_path("logo.png")
         logo_pil = Image.open(logo_path)
         logo_ctk = ctk.CTkImage(light_image=logo_pil, dark_image=logo_pil, size=(36, 36))
         logo_label = ctk.CTkLabel(logo_frame, image=logo_ctk, text="")
