@@ -2,6 +2,11 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
+*.egg
+.python-version
+*.pyc
+*.pyo
+*.pyd
 
 # Build
 build/
@@ -13,7 +18,29 @@ dist/
 .idea/
 *.swp
 *.swo
+*.swn
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
 # OS
 Thumbs.db
 .DS_Store
+Desktop.ini
+ehthumbs.db
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# PyInstaller
+*.manifest
