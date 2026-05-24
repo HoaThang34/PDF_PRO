@@ -2,6 +2,7 @@ import sys
 import os
 import customtkinter as ctk
 import tkinter as tk
+from PIL import Image
 
 from src.ui.themes.theme import COLORS, FONTS, SPACING, WINDOW
 from src.ui.pages.home_page import HomePage
@@ -42,6 +43,9 @@ class PDFProApp(ctk.CTk):
         self._build_content()
         self._build_footer()
 
+        # Bind phím Escape để quay về trang chủ
+        self.bind_all("<Escape>", self._on_esc_pressed)
+
         # Đặt cửa sổ ở giữa màn hình
         self._center_window()
 
@@ -70,16 +74,12 @@ class PDFProApp(ctk.CTk):
         logo_frame = ctk.CTkFrame(header, fg_color="transparent")
         logo_frame.grid(row=0, column=0, padx=24, pady=12, sticky="w")
 
-        # Icon PDF (canvas nhỏ)
-        logo_canvas = tk.Canvas(
-            logo_frame,
-            width=36, height=36,
-            bg=COLORS["bg_header"],
-            highlightthickness=0,
-            bd=0,
-        )
-        logo_canvas.pack(side="left", padx=(0, 10))
-        self._draw_logo(logo_canvas)
+        # Logo image
+        logo_path = os.path.join(os.path.dirname(__file__), "logo.png")
+        logo_pil = Image.open(logo_path)
+        logo_ctk = ctk.CTkImage(light_image=logo_pil, dark_image=logo_pil, size=(36, 36))
+        logo_label = ctk.CTkLabel(logo_frame, image=logo_ctk, text="")
+        logo_label.pack(side="left", padx=(0, 10))
 
         # Tên app
         logo_text_frame = ctk.CTkFrame(logo_frame, fg_color="transparent")
@@ -178,33 +178,6 @@ class PDFProApp(ctk.CTk):
             link.bind("<Leave>", lambda e, l=link: l.configure(text_color=COLORS["text_muted"]))
             link.bind("<Button-1>", lambda e, t=link_text: self._on_footer_link_click(t))
 
-    def _draw_logo(self, canvas):
-        """Vẽ logo PDF PRO trên canvas."""
-        # Nền gradient (dùng màu tím)
-        canvas.create_rectangle(
-            2, 2, 34, 34,
-            fill=COLORS["accent_purple"],
-            outline="",
-            width=0,
-        )
-        # Vẽ bo góc bằng cách phủ nền
-        # Icon file PDF đơn giản
-        canvas.create_rectangle(
-            8, 6, 26, 30,
-            outline="white", width=1.5, fill=""
-        )
-        canvas.create_polygon(
-            20, 6, 26, 12, 20, 12,
-            outline="white", fill="", width=1
-        )
-        # Chữ PDF nhỏ
-        canvas.create_text(
-            17, 22,
-            text="PDF",
-            fill="white",
-            font=("Segoe UI", 6, "bold"),
-        )
-
     def _on_feature_selected(self, feature_name):
         """Xử lý khi chọn một tính năng - chuyển đến trang tính năng."""
         if feature_name == "Ghép File PDF":
@@ -239,6 +212,10 @@ class PDFProApp(ctk.CTk):
             self._current_feature_frame.destroy()
             self._current_feature_frame = None
         self._home_page.grid(row=1, column=0, sticky="nsew")
+
+    def _on_esc_pressed(self, event=None):
+        """Xử lý khi nhấn phím Escape - quay về trang chủ."""
+        self._show_home()
 
     def _on_footer_link_click(self, link_text):
         """Xử lý khi nhấn vào link ở footer."""

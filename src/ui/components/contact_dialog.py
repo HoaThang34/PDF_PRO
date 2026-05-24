@@ -109,11 +109,6 @@ class ContactDialog(ctk.CTkToplevel):
         )
         close_btn.pack(pady=(12, 20))
 
-    @staticmethod
-    def _copy_text(text):
-        root = tk.Tk()
-        root.withdraw()
-        root.clipboard_clear()
-        root.clipboard_append(text)
-        root.update()
-        root.destroy()
+    def _copy_text(self, text):
+        self.clipboard_clear()
+        self.clipboard_append(text)
