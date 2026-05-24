@@ -29,9 +29,9 @@ PDF-PRO/
 ## Danh Sách Tính Năng
 | STT | Tính Năng          | Trạng Thái |
 |-----|--------------------|------------|
-| 1   | Ghép File PDF      | Chưa phát triển |
-| 2   | Sắp Xếp Trang     | Chưa phát triển |
-| 3   | Chỉnh Sửa & Ký Tên | Chưa phát triển |
+| 1   | Ghép File PDF      | Đã phát triển |
+| 2   | Sắp Xếp Trang     | Đã phát triển |
+| 3   | Chỉnh Sửa & Ký Tên | Đã phát triển |
 | 4   | Tách Trang PDF     | Chưa phát triển |
 | 5   | Trích Xuất Văn Bản | Chưa phát triển |
 | 6   | Xuất Ảnh Từ PDF    | Chưa phát triển |
@@ -43,6 +43,9 @@ PDF-PRO/
 |----------------|-----------|---------------------|
 | customtkinter  | 5.2.2     | GUI Framework       |
 | Pillow         | 11.2.1    | Xử lý hình ảnh     |
+| pypdf          | 5.4.0     | Ghép & sắp xếp PDF |
+| PyMuPDF        | 1.25.5    | Chỉnh sửa & ký tên |
 
 ## Ghi Chú Phát Triển
 - **23/05/2026:** Khởi tạo dự án, xây dựng giao diện ban đầu (khung UI)
+- **24/05/2026:** Phát triển tính năng Chỉnh Sửa & Ký Tên (EditPage + SignatureDialog + pdf_edit.py)

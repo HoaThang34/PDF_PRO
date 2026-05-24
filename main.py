@@ -6,6 +6,8 @@ import tkinter as tk
 from src.ui.themes.theme import COLORS, FONTS, SPACING, WINDOW
 from src.ui.pages.home_page import HomePage
 from src.ui.pages.merge_page import MergePage
+from src.ui.pages.sort_page import SortPage
+from src.ui.pages.edit_page import EditPage
 from src.ui.components.contact_dialog import ContactDialog
 
 
@@ -202,6 +204,10 @@ class PDFProApp(ctk.CTk):
         """Xử lý khi chọn một tính năng - chuyển đến trang tính năng."""
         if feature_name == "Ghép File PDF":
             self._open_feature_page(MergePage)
+        elif feature_name == "Sắp Xếp Trang":
+            self._open_feature_page(SortPage)
+        elif feature_name == "Chỉnh Sửa & Ký Tên":
+            self._open_feature_page(EditPage)
 
     def _open_feature_page(self, page_class):
         """Mở một trang tính năng mới."""
