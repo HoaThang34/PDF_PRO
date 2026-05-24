@@ -111,19 +111,21 @@ class HomePage(ctk.CTkFrame):
         self._draw_icon_bg(cv, icon_s, feat["color"], 0.12)
         feat["icon_func"](cv, icon_s, feat["color"])
 
-        ctk.CTkLabel(
+        title_label = ctk.CTkLabel(
             card, text=feat["title"],
             font=("Segoe UI", 14, "bold"),
             text_color=COLORS["text_primary"],
-        ).grid(row=1, column=0, pady=(10, 4))
+        )
+        title_label.grid(row=1, column=0, pady=(10, 4))
 
-        ctk.CTkLabel(
+        desc_label = ctk.CTkLabel(
             card, text=feat["desc"],
             font=("Segoe UI", 11),
             text_color=COLORS["text_secondary"],
             justify="center",
             wraplength=200,
-        ).grid(row=2, column=0, padx=16, pady=(0, 16))
+        )
+        desc_label.grid(row=2, column=0, padx=16, pady=(0, 16))
 
         def on_enter(e):
             card.configure(fg_color=COLORS["bg_tertiary"], border_color=feat["color"])
@@ -136,7 +138,7 @@ class HomePage(ctk.CTkFrame):
             if self._on_feature_click:
                 self._on_feature_click(feat["title"])
 
-        for w in (card, cv):
+        for w in (card, cv, icon_frame, title_label, desc_label):
             w.bind("<Enter>", on_enter)
             w.bind("<Leave>", on_leave)
             w.bind("<Button-1>", on_click)

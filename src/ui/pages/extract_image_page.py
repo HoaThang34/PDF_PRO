@@ -392,7 +392,7 @@ class ExtractImagePage(ctk.CTkFrame):
         if not self._pdf_path:
             return
         self._preview_label.configure(text="\u0110ang t\u1ea3i \u1ea3nh...")
-        self._preview_label.configure(image="")
+        self._preview_label.configure(image=None)
         Thread(target=self._load_preview, args=(index,), daemon=True).start()
 
     def _load_preview(self, index):
@@ -417,10 +417,10 @@ class ExtractImagePage(ctk.CTkFrame):
         self._preview_label.configure(image=ctk_img, text="")
 
     def _update_preview_error(self, msg):
-        self._preview_label.configure(text=f"L\u1ed7i khi t\u1ea3i \u1ea3nh:\n{msg}", image="")
+        self._preview_label.configure(text=f"L\u1ed7i khi t\u1ea3i \u1ea3nh:\n{msg}", image=None)
 
     def _clear_preview(self):
-        self._preview_label.configure(image="", text="Ch\u1ecdn m\u1ed9t trang \u0111\u1ec3 xem tr\u01b0\u1edbc \u1ea3nh.")
+        self._preview_label.configure(image=None, text="Ch\u1ecdn m\u1ed9t trang \u0111\u1ec3 xem tr\u01b0\u1edbc \u1ea3nh.")
 
     def _select_all(self):
         if not self._pages:

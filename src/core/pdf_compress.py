@@ -42,7 +42,10 @@ def get_compress_thumbnail(pdf_path, page_num, max_size=(120, 160)):
 
 
 def get_file_size_str(file_path):
-    size = os.path.getsize(file_path)
+    if isinstance(file_path, (int, float)):
+        size = file_path
+    else:
+        size = os.path.getsize(file_path)
     if size < 1024:
         return f"{size} B"
     elif size < 1024 * 1024:

@@ -12,7 +12,6 @@ from src.core.pdf_compress import (
     get_file_size_str,
     compress_pdf,
 )
-from customtkinter import CTkImage
 
 
 class CompressPage(ctk.CTkFrame):
