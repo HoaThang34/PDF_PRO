@@ -34,9 +34,9 @@ PDF-PRO/
 | 3   | Chỉnh Sửa & Ký Tên | Đã phát triển |
 | 4   | Tách Trang PDF     | Đã phát triển |
 | 5   | Trích Xuất Văn Bản | Đã phát triển |
-| 6   | Xuất Ảnh Từ PDF    | Chưa phát triển |
-| 7   | Xuất PDF Sang Excel | Chưa phát triển |
-| 8   | Nén File PDF       | Chưa phát triển |
+| 6   | Xuất Ảnh Từ PDF    | Đã phát triển |
+| 7   | Xuất PDF Sang Excel | Đã phát triển |
+| 8   | Nén File PDF       | Đã phát triển |
 
 ## Thư Viện Sử Dụng
 | Thư Viện       | Phiên Bản | Mục Đích           |
@@ -45,6 +45,7 @@ PDF-PRO/
 | Pillow         | 11.2.1    | Xử lý hình ảnh     |
 | pypdf          | 5.4.0     | Ghép & sắp xếp PDF |
 | PyMuPDF        | 1.25.5    | Chỉnh sửa & ký tên |
+| openpyxl       | 3.1.5     | Xuất PDF sang Excel |
 
 ## Ghi Chú Phát Triển
 - **23/05/2026:** Khởi tạo dự án, xây dựng giao diện ban đầu (khung UI)

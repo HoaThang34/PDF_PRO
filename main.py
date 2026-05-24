@@ -10,6 +10,9 @@ from src.ui.pages.sort_page import SortPage
 from src.ui.pages.edit_page import EditPage
 from src.ui.pages.split_page import SplitPage
 from src.ui.pages.extract_text_page import ExtractTextPage
+from src.ui.pages.extract_image_page import ExtractImagePage
+from src.ui.pages.to_excel_page import ToExcelPage
+from src.ui.pages.compress_page import CompressPage
 from src.ui.components.contact_dialog import ContactDialog
 
 
@@ -214,6 +217,12 @@ class PDFProApp(ctk.CTk):
             self._open_feature_page(SplitPage)
         elif feature_name == "Trích Xuất Văn Bản":
             self._open_feature_page(ExtractTextPage)
+        elif feature_name == "Xuất Ảnh Từ PDF":
+            self._open_feature_page(ExtractImagePage)
+        elif feature_name == "Xuất PDF Sang Excel":
+            self._open_feature_page(ToExcelPage)
+        elif feature_name == "Nén File PDF":
+            self._open_feature_page(CompressPage)
 
     def _open_feature_page(self, page_class):
         """Mở một trang tính năng mới."""

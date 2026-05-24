@@ -11,10 +11,10 @@ No tests, linters, or typecheckers configured. Edit `requirements.txt` when addi
 ## Architecture
 
 - **Entrypoint:** `main.py` → `PDFProApp(ctk.CTk)` (CustomTkinter)
-- **4 implemented features** — `Merge` (pypdf), `Sort` (pypdf + PyMuPDF), `Edit & Sign` (PyMuPDF), `Split` (PyMuPDF). The rest (Extract Text, Extract Image, Export Excel, Compress) remain stubs.
+- **7 implemented features** — `Merge` (pypdf), `Sort` (pypdf + PyMuPDF), `Edit & Sign` (PyMuPDF), `Split` (PyMuPDF), `Extract Text` (PyMuPDF), `Extract Image` (PyMuPDF), `Export Excel` (PyMuPDF + openpyxl), `Compress` (PyMuPDF).
 - **Edit & Sign feature** uses `src/core/pdf_edit.py` (PyMuPDF). Coordinate system: stored in PDF space (y from bottom), converted to/from display space for canvas rendering. UI at `src/ui/pages/edit_page.py`, signature dialog at `src/ui/pages/signature_dialog.py`.
 - **Split feature** uses `src/core/pdf_split.py` (PyMuPDF). Two modes: split all pages or extract selected pages. UI at `src/ui/pages/split_page.py` with teal accent color.
-- **8 features** listed in `docs/project_config.md`, 4 implemented + 4 stubs
+- **8 features** listed in `docs/project_config.md`, all 8 implemented
 - **Themes:** `src/ui/themes/theme.py` — dark theme, Segoe UI fonts, 4px spacing scale
 
 ## Key Quirks

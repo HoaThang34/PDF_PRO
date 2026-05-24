@@ -1,5 +1,28 @@
 # PDF PRO - Nhat Ky Phat Trien
 
+## 24/05/2026 - Phat trien 3 tinh nang con lai
+
+### Cong viec da thuc hien
+
+#### Tinh nang 6: Xuat Anh Tu PDF
+- Tao `src/core/pdf_extract_image.py`: logic xuat trang PDF thanh anh PNG/JPEG
+- Tao `src/ui/pages/extract_image_page.py`: giao dien chon trang, xem truoc anh, tuy chon dinh dang (PNG/JPEG) va DPI (150-600)
+- Cap nhat `main.py`: routing tinh nang moi
+
+#### Tinh nang 7: Xuat PDF Sang Excel
+- Them `openpyxl==3.1.5` vao `requirements.txt`
+- Tao `src/core/pdf_to_excel.py`: trich xuat van ban tu PDF, phan tich dong/cot, xuat file Excel co dinh dang
+- Tao `src/ui/pages/to_excel_page.py`: giao dien chon trang, xem truoc, tuy chon gop thanh 1 file
+- Cap nhat `main.py`: routing tinh nang moi
+
+#### Tinh nang 8: Nen File PDF
+- Tao `src/core/pdf_compress.py`: nen PDF bang cach toi uu hinh anh, gom rac, deflate
+- Tao `src/ui/pages/compress_page.py`: giao dien chon file, hien thi thong tin, tuy chon muc do nen (Thap/Trung binh/Cao)
+- Cap nhat `main.py`: routing tinh nang moi
+
+### Cap nhat tai lieu
+- `docs/project_config.md`: danh dau 3 tinh nang da phat trien, them openpyxl vao danh sach thu vien
+
 ## 24/05/2026 - Phat trien tinh nang Chinh Sua & Ky Ten
 
 ### Cong viec da thuc hien
