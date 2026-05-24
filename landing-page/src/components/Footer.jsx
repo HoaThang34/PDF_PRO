@@ -1,9 +1,4 @@
-const footerLinks = {
-  'Sản phẩm': ['Tính năng', 'Bảng giá', 'Tải app', 'API Docs', 'Trình duyệt'],
-  'Công cụ': ['Merge PDF', 'Split PDF', 'Compress PDF', 'OCR PDF', 'Edit PDF'],
-  'Hỗ trợ': ['Trợ giúp', 'Liên hệ', 'Báo cáo lỗi', 'Yêu cầu tính năng'],
-  'Pháp lý': ['Chính sách bảo mật', 'Điều khoản sử dụng', 'Cookie Policy'],
-}
+import { IconFacebook, IconGithub, IconMail, IconPhone } from '../icons.jsx'
 
 export default function Footer() {
   return (
@@ -12,38 +7,88 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="logo">
-              <div className="logo-icon">P</div>
+              <img src="/logo.png" alt="PDF PRO" className="logo-img" />
               <span className="logo-text">PDF PRO</span>
             </div>
             <p className="footer-desc">
               Công cụ xử lý PDF chuyên nghiệp, miễn phí và bảo mật.
-              Được phát triển bởi đội ngũ kỹ sư tâm huyết.
+              Được phát triển bởi đội ngũ kỹ sư tâm huyết với sứ mệnh mang đến
+              giải pháp xử lý PDF tốt nhất cho người Việt.
             </p>
-            <div className="footer-social">
-              <a href="#!" className="social-link" aria-label="Facebook">f</a>
-              <a href="#!" className="social-link" aria-label="GitHub">G</a>
-              <a href="#!" className="social-link" aria-label="YouTube">▶</a>
-              <a href="#!" className="social-link" aria-label="Twitter">𝕏</a>
+
+            <div className="footer-author">
+              <div className="author-card">
+                <img
+                  src="/hoaquangthang.png"
+                  alt="Hoà Quang Thắng"
+                  className="author-avatar"
+                />
+                <div>
+                  <div className="author-name">Hoà Quang Thắng</div>
+                  <div className="author-role">Founder & Developer</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title} className="footer-col">
-              <h4>{title}</h4>
-              <ul>
-                {links.map((l) => (
-                  <li key={l}><a href="#!">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="footer-col">
+            <h4>Công cụ</h4>
+            <ul>
+              <li><a href="#tools">Ghép file PDF</a></li>
+              <li><a href="#tools">Tách trang PDF</a></li>
+              <li><a href="#tools">Nén file PDF</a></li>
+              <li><a href="#tools">Chuyển đổi PDF</a></li>
+              <li><a href="#tools">Chỉnh sửa PDF</a></li>
+              <li><a href="#tools">OCR PDF</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Liên hệ</h4>
+            <ul className="footer-contact">
+              <li>
+                <a href="https://www.facebook.com/ThGThanG.734" target="_blank" rel="noreferrer">
+                  <span className="contact-icon"><IconFacebook /></span>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/HoaThang34" target="_blank" rel="noreferrer">
+                  <span className="contact-icon"><IconGithub /></span>
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="mailto:hoathang34.09@gmail.com">
+                  <span className="contact-icon"><IconMail /></span>
+                  hoathang34.09@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:0389823083">
+                  <span className="contact-icon"><IconPhone /></span>
+                  0389 823 083
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Pháp lý</h4>
+            <ul>
+              <li><a href="#!">Chính sách bảo mật</a></li>
+              <li><a href="#!">Điều khoản sử dụng</a></li>
+              <li><a href="#!">Cookie Policy</a></li>
+            </ul>
+          </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2024 PDF PRO. Tất cả quyền được bảo lưu.</p>
+          <p>© 2026 PDF PRO. Tất cả quyền được bảo lưu.</p>
           <p>
-            Liên hệ: <a href="mailto:hello@pdfpro.com">hello@pdfpro.com</a> |
-            <a href="https://github.com/HoaThang34/PDF_PRO" target="_blank" rel="noreferrer"> GitHub</a>
+            <a href="https://github.com/HoaThang34/PDF_PRO" target="_blank" rel="noreferrer">
+              <IconGithub /> GitHub
+            </a>
           </p>
         </div>
       </div>

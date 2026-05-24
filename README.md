@@ -5,7 +5,7 @@
   <p>Ứng dụng desktop giao diện thiết kế hiện đại, hỗ trợ 8 tính năng xử lý PDF mạnh mẽ.</p>
 
   <!-- Nút tải xuống một cú nhấp chuột -->
-  <a href="https://github.com/HoaThang34/PDF_PRO/releases/latest/download/PDF-PRO.exe">
+  <a href="https://github.com/HoaThang34/PDF_PRO/releases/download/v1.0.0/PDF-PRO.exe">
     <img src="https://img.shields.io/badge/T%E1%BA%A3i%20xu%E1%BB%91ng%20PDF%20PRO%20v1.0-1a1b2e?style=for-the-badge&logo=windows&logoColor=white&labelColor=%233b82f6" alt="Tải xuống">
   </a>
 
@@ -21,6 +21,45 @@
     <img src="https://img.shields.io/badge/Gi%E1%BA%A5y%20ph%C3%A9p-MIT-blue?style=flat-square" alt="License">
   </a>
 </div>
+
+---
+
+## Giao Diện Ứng Dụng
+
+<div align="center">
+  <img src="image/homepage.png" alt="Giao diện chính PDF PRO" width="80%" style="border-radius: 12px; border: 1px solid #333;">
+  <p><em>Giao diện chính với dark theme và các card tính năng</em></p>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="image/tinhnang.png" alt="Tính năng chỉnh sửa PDF" width="80%" style="border-radius: 12px; border: 1px solid #333;">
+  <p><em>Tính năng chỉnh sửa & ký tên trực tiếp trên PDF</em></p>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="image/contact.png" alt="Thông tin liên hệ" width="80%" style="border-radius: 12px; border: 1px solid #333;">
+  <p><em>Trang thông tin liên hệ và thông tin ứng dụng</em></p>
+</div>
+
+---
+
+## Landing Page
+
+Truy cập landing page trực tuyến tại: [pdf-pro.vercel.app](https://pdf-pro.vercel.app) (nếu đã deploy)
+
+Landing page được xây dựng với **Vite + React 18**, thiết kế dark theme chuyên nghiệp, đầy đủ thông tin sản phẩm và liên hệ tác giả.
+
+```bash
+cd landing-page
+npm install
+npm run dev      # Chạy local
+npm run build    # Build production
+npx vercel --prod  # Deploy lên Vercel
+```
 
 ---
 
@@ -67,7 +106,7 @@ python main.py
 | **pypdf** | Ghép và sắp xếp trang PDF |
 | **Pillow** | Xử lý hình ảnh |
 | **openpyxl** | Xuất dữ liệu PDF sang Excel |
-| **PyInstaller** | Đóng gói thành file .exy |
+| **PyInstaller** | Đóng gói thành file .exe |
 
 ## Giấy Phép
 
@@ -76,3 +115,13 @@ Dự án này được phân phối dưới giấy phép [MIT](LICENSE).
 ## Tác Giả
 
 **HOA QUANG THANG** &copy; 2026
+
+<div align="center">
+  <img src="image/hoaquangthang.png" alt="Hoà Quang Thắng" width="120" height="120" style="border-radius: 50%;">
+  <br>
+  <strong>Hoà Quang Thắng</strong>
+  <br>
+  <a href="https://www.facebook.com/ThGThanG.734">Facebook</a> ·
+  <a href="https://github.com/HoaThang34">GitHub</a> ·
+  <a href="mailto:hoathang34.09@gmail.com">Email</a>
+</div>

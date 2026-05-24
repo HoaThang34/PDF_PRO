@@ -16,6 +16,7 @@ No tests, linters, or typecheckers configured. Edit `requirements.txt` when addi
 - **Split feature** uses `src/core/pdf_split.py` (PyMuPDF). Two modes: split all pages or extract selected pages. UI at `src/ui/pages/split_page.py` with teal accent color.
 - **8 features** listed in `docs/project_config.md`, all 8 implemented
 - **Themes:** `src/ui/themes/theme.py` — dark theme, Segoe UI fonts, 4px spacing scale
+- **Landing page:** `landing-page/` — Vite + React 18, deploy Vercel zero-config. 12 sections, SVG icons, real screenshots from `image/`. Run `cd landing-page && npm run dev` to develop, `npm run build` to build, `npx vercel --prod` to deploy.
 
 ## Key Quirks
 

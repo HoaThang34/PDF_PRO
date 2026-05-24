@@ -1,3 +1,5 @@
+import { IconStar } from '../icons.jsx'
+
 const testimonials = [
   {
     name: 'Nguyễn Hoàng Anh', role: 'Software Engineer', company: 'FPT Software',
@@ -21,6 +23,16 @@ const testimonials = [
   },
 ]
 
+function Stars() {
+  return (
+    <div className="testimonial-stars">
+      {[...Array(5)].map((_, i) => (
+        <span key={i} className="star-icon"><IconStar /></span>
+      ))}
+    </div>
+  )
+}
+
 export default function Testimonials() {
   return (
     <section className="testimonials">
@@ -32,7 +44,7 @@ export default function Testimonials() {
         <div className="testimonials-grid">
           {testimonials.map((t, i) => (
             <div key={i} className="testimonial-card">
-              <div className="testimonial-stars">★★★★★</div>
+              <Stars />
               <p className="testimonial-text">"{t.text}"</p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">{t.avatar}</div>

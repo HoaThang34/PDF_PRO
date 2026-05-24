@@ -1,4 +1,21 @@
-# PDF PRO - Nhat Ky Phat Trien
+# PDF PRO - Nhật Ký Phát Triển
+
+## 24/05/2026 - Xây dựng Landing Page + cập nhật tài liệu
+
+### Công việc đã thực hiện
+- Tạo `landing-page/` với Vite + React 18 (thư mục riêng, không trùng source code tool)
+- 12 sections: Header, Hero, Tools Grid, Features, Demo/Showcase, How It Works, Advanced Features, Security, Performance, Testimonials, FAQ, Final CTA, Footer
+- Thiết kế dark theme, responsive, có sẵn file `vercel.json` deploy zero-config lên Vercel
+- Sử dụng icon SVG thay vì emoji — file `src/icons.jsx` chứa 30+ component icon
+- Tích hợp hình ảnh thực tế: ảnh chụp giao diện (`image/homepage.png`), chân dung tác giả (`image/hoaquangthang.png`), logo (`logo.png`)
+- Hiệu ứng animation cho 3 bước xử lý, badge floating
+- Before/After so sánh chất lượng trước-sau khi xử lý (AI-generated content)
+- Thông tin tác giả: Hoà Quang Thắng, Facebook, GitHub, Email, SĐT
+- Cập nhật `docs/project_config.md`: thêm mô tả landing page và thư mục `image/`, `landing-page/`
+- Cập nhật `README.md`: sử dụng ảnh thực tế, thêm landing page section
+- Cập nhật `AGENTS.md`: hướng dẫn landing page
+
+
 
 ## 24/05/2026 - Phat trien 3 tinh nang con lai
 

@@ -8,11 +8,22 @@
 - **Tác giả:** HOA QUANG THANG
 - **Năm:** 2026
 
+## Landing Page
+- **Công nghệ:** Vite + React 18
+- **Thư mục:** `landing-page/` (tách biệt hoàn toàn với source tool)
+- **Triển khai:** Vercel (zero-config, auto-detect Vite)
+- **Gồm 12 sections:** Header, Hero, Tools Grid, Features, Demo/Showcase, How It Works, Advanced Features, Security, Performance, Testimonials, FAQ, Final CTA, Footer
+- **Hình ảnh thực tế:** Sử dụng ảnh chụp từ ứng dụng (`image/homepage.png`, `image/tinhnang.png`, `image/contact.png`) và logo (`logo.png`)
+- **Tác giả:** Hiển thị thông tin + chân dung Hoà Quang Thắng
+- **Liên kết:** Facebook, GitHub, Email, SĐT — trực tiếp trên landing page
+
 ## Cấu Trúc Thư Mục
 ```
 PDF-PRO/
 ├── .rules/              # Quy định dự án
 ├── docs/                # Tài liệu & cấu hình
+├── image/               # Hình ảnh thực tế (screenshot, chân dung)
+├── landing-page/        # Landing page (React + Vite, deploy Vercel)
 ├── src/                 # Mã nguồn chính
 │   ├── assets/          # Tài nguyên (icon SVG, hình ảnh)
 │   │   └── icons/       # Icon SVG cho các tính năng
