@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="footer-author">
               <div className="author-card">
                 <img
-                  src="/hoaquangthang.png"
+                  src="/author.png"
                   alt="Hoà Quang Thắng"
                   className="author-avatar"
                 />

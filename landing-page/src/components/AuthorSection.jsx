@@ -7,7 +7,7 @@ export default function AuthorSection() {
         <div className="author-content">
           <div className="author-avatar-wrap">
             <img
-              src="/hoaquangthang.png"
+              src="/author.png"
               alt="Hoà Quang Thắng"
               className="author-section-avatar"
             />

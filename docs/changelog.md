@@ -7,7 +7,7 @@
 - 12 sections: Header, Hero, Tools Grid, Features, Demo/Showcase, How It Works, Advanced Features, Security, Performance, Testimonials, FAQ, Final CTA, Footer
 - Thiết kế dark theme, responsive, có sẵn file `vercel.json` deploy zero-config lên Vercel
 - Sử dụng icon SVG thay vì emoji — file `src/icons.jsx` chứa 30+ component icon
-- Tích hợp hình ảnh thực tế: ảnh chụp giao diện (`image/homepage.png`), chân dung tác giả (`image/hoaquangthang.png`), logo (`logo.png`)
+- Tích hợp hình ảnh thực tế: ảnh chụp giao diện (`image/homepage.png`), chân dung tác giả (`image/author.png`), logo (`logo.png`)
 - Hiệu ứng animation cho 3 bước xử lý, badge floating
 - Before/After so sánh chất lượng trước-sau khi xử lý (AI-generated content)
 - Thông tin tác giả: Hoà Quang Thắng, Facebook, GitHub, Email, SĐT

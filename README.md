@@ -117,7 +117,7 @@ Dự án này được phân phối dưới giấy phép [MIT](LICENSE).
 **HOA QUANG THANG** &copy; 2026
 
 <div align="center">
-  <img src="image/hoaquangthang.png" alt="Hoà Quang Thắng" width="120" height="120" style="border-radius: 50%;">
+  <img src="image/author.png" alt="Hoà Quang Thắng" width="120" height="120" style="border-radius: 50%;">
   <br>
   <strong>Hoà Quang Thắng</strong>
   <br>
