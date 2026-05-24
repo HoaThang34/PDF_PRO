@@ -76,8 +76,3 @@ Dự án này được phân phối dưới giấy phép [MIT](LICENSE).
 ## Tác Giả
 
 **HOA QUANG THANG** &copy; 2026
-
-## Ghi Chú
-
-- Toàn bộ giao diện người dùng bằng tiếng Việt
-- File README này được tạo với sự hỗ trợ của AI
